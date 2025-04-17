@@ -28,4 +28,3 @@ export function Profile({ name, tag, location, stats, image }) {
     </div>
   );
 }
-export default Profile;

@@ -1,0 +1,11 @@
+.list {
+
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+    min-width: 780px;
+}

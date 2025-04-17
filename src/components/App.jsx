@@ -1,11 +1,11 @@
 import "./App.css";
 
 import userData from "../userData.json";
-import Profile from "./Profile";
-
-import FriendList from "./FriendList";
+import { Profile } from "./Profile";
 import friends from "../friends.json";
-import TransactionHistory from "./TransactionHistory";
+import { FriendList } from "./FriendList";
+
+// import TransactionHistory from "./TransactionHistory";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         stats={userData.stats}
       />
       <FriendList friends={friends} />
-      <TransactionHistory />
+      {/* <TransactionHistory /> */}
     </div>
   );
 }
