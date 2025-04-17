@@ -3,26 +3,26 @@ import css from "./Profile.module.css";
 
 export function Profile({ name, tag, location, stats, image }) {
   return (
-    <div>
-      <div>
-        <img src={image} alt={name} width={640} className="{clsx(css[image])" />
-        <p>{name}</p>
-        <p>{tag}</p>
-        <p>{location}</p>
+    <div className={clsx(css.container)}>
+      <div className={clsx(css.info)}>
+        <img src={image} alt={name} width={480} className={clsx(css.image)} />
+        <p className={clsx(css.userName)}>{name}</p>
+        <p className={clsx(css.tag)}>@{tag}</p>
+        <p className={clsx(css.location)}>{location}</p>
       </div>
 
-      <ul>
-        <li>
+      <ul className={clsx(css.stats)}>
+        <li className={clsx(css.statsList)}>
           <span>Followers</span>
-          <span>{stats.followers}</span>
+          <span className={clsx(css.statsNumbers)}>{stats.followers}</span>
         </li>
-        <li>
+        <li className={clsx(css.statsList)}>
           <span>Views</span>
-          <span>{stats.views}</span>
+          <span className={clsx(css.statsNumbers)}>{stats.views}</span>
         </li>
-        <li>
+        <li className={clsx(css.statsList)}>
           <span>Likes</span>
-          <span>{stats.likes}</span>
+          <span className={clsx(css.statsNumbers)}>{stats.likes}</span>
         </li>
       </ul>
     </div>
